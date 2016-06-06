@@ -1,0 +1,30 @@
+Source: awa
+Section: unknown
+Priority: optional
+Maintainer: David Antliff <david.antliff@imgtec.com>
+Build-Depends: debhelper (>=9), dh-systemd, cmake, git, mercurial
+Standards-Version: 3.9.6
+Homepage: https://github.com/FlowM2M/AwaLWM2M
+#Vcs-Git: git://anonscm.debian.org/collab-maint/awa.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/awa.git
+
+Package: awa
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Awa LightweightM2M Device Management suite.
+ The Internet of Things (IoT) is currently fragmented by numerous proprietary
+ methods of device management. In order for the IoT to reach its full
+ potential, devices from different vendors must be able to communicate
+ effectively with each other. This is where open standards such as the Open
+ Mobile Alliance's (OMA) Lightweight Machine to Machine protocol (LWM2M)
+ become important.
+ .
+ The LWM2M protocol has been designed to be highly efficient in terms of data
+ transfer and memory footprint, making it suitable for deployment on larger
+ gateway devices as well as the more constrained devices.
+ .
+ Awa LightweightM2M is an implementation of the OMA Lightweight M2M protocol
+ that provides a secure and standards compliant device management solution
+ to simplify the development of M2M applications by providing an intuitive
+ API that enables customization without the need for an intimate knowledge
+ of M2M protocols.

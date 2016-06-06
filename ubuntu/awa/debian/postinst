@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+#DEBHELPER#
+
+mkdir -p /var/log/awa/
+chown nobody:nogroup /var/log/awa
+
+
