@@ -9,7 +9,11 @@ PACKAGE_NAME="awa"
 GITHUB_TARBALL=$GITHUB_COMMIT.tar.gz
 GITHUB_TARBALL_URL="https://github.com/FlowM2M/AwaLWM2M/archive/${GITHUB_TARBALL}"
 
-ORIG_TARBALL="${PACKAGE_NAME}_${PACKAGE_VERSION}.orig.tar.gz"
+# extract the current version number from debian/changelog, removing the -N suffix:
+PACKAGE_VERSION=$(dpkg-parsechangelog --show-field Version)
+AWA_VERSION=${PACKAGE_VERSION%%-*}
+
+ORIG_TARBALL="${PACKAGE_NAME}_${AWA_VERSION}.orig.tar.gz"
 
 # clean up first
 rm -f $GITHUB_TARBALL
